@@ -27,7 +27,7 @@ french_ssn_info("123")
 2) Why RegEx is useful, what two contexts they are useful?
 3) Value of TDD, review the concept of rspec
 4) Guard clauses in our code
-5) Matchdata and capture groups & their improtance
+5) Matchdata and capture groups & their importance
 6) Requiring things in Ruby
 7) Sneak peak into parsing
 8) Coding Sequence (tests > psuedocode > code for concept > code for performance > code for elegance)
