@@ -2,7 +2,7 @@
 
 What's your number?
 
-Write a #french_ssn_info method extracting infos from French SSN (Social Security Number) using RegExp.
+Write a #french_ssn_info method extracting info from French SSN (Social Security Number) using RegExp.
 
 Valid French social security numbers have the following pattern:
 
