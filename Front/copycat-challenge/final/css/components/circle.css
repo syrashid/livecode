@@ -1,0 +1,11 @@
+.circle {
+  border: 31px solid #215FFC;
+  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  z-index: 5;
+  position: absolute;
+  left: -152px;
+  top: -152px;
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.3), inset -4px -4px 12px rgba(0,0,0,0.3);
+}

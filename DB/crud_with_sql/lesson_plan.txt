@@ -1,0 +1,21 @@
+SQLite Task Manager
+Let’s build a Task class capable of CRUD against a SQL table tasks.
+
+You are given a tasks.db database with one task (id = 1), a task.rb file to complete and a test.rb to test your code.
+
+Before we start, let's make sure we have a strong understanding.  What is the input, and what is the output?
+
+X Implement the READ logic to find a given task (by its id)
+X Implement the CREATE logic in a save instance method
+X Implement the UPDATE logic in the same method
+X Implement the READ logic to retrieve all tasks (what type of method is it?)
+X Implement the DESTROY logic on a task
+
+
+Talking Points
+- Iterative approach to problem saving
+- In our MVC Model, what is the DB synonomous to?
+- Why do we pass parameters when we interact with our DB, what are we trying to prevent?
+- Difference between .new and .save
+- What is the role of save to do here (two components)
+

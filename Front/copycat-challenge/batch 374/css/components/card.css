@@ -1,0 +1,30 @@
+.card {
+  background-color: #F4F4F4;
+  border-radius: 20px;
+  text-align: center;
+  width: 200px;
+  padding: 32px 40px;
+}
+
+.number {
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.starting {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.list-items {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.list-item {
+
+}
+
+.fa-check {
+  color: lightgreen;
+}
