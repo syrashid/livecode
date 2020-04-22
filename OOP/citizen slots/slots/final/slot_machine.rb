@@ -1,5 +1,5 @@
 class SlotMachine
-  ITEMS = {cherry: 1, seven: 2, bell: 3, star: 4, joker: 5 }
+  ITEMS = { cherry: 1, seven: 2, bell: 3, star: 4, joker: 5 }
 
   def score(reels)
     if reels.uniq.size == 1

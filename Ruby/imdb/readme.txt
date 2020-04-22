@@ -14,7 +14,7 @@
 What are the biggest steps we need, can we break them down further
 
 >> TESTING <<
-Let's think about the tow main components here we need to test
+Let's think about the two main components here we need to test
 
 >> IMPORTANT TOPICS FOR SY TO COVER <<
 1) Playing with YAML files (https://medium.com/@kristenfletcherwilde/saving-retrieving-data-with-a-yaml-file-in-ruby-the-basics-e45232903d94), it's YAML Ain't A Markup Language (recursive acryonym, similar to PHP), human-readable data structure

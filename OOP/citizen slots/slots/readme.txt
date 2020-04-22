@@ -11,5 +11,10 @@ Bell🛎            30             15
 Seven7️⃣           20             10
 Cherry🍒          10              5
 
->> TOPICS FOR SY TO COVER <<
--
+>> REMIND SY TO COVER <<
+1) Make the code work for you, there are no rules to this, create as needed
+2) Look for patterns, avoid hardcoding whenever possible
+
+
+3 of the same
+
