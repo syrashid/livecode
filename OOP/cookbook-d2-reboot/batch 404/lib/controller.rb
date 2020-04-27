@@ -1,5 +1,6 @@
 require_relative 'view'
 require_relative 'recipe'
+require_relative 'services/scrape_bbc_good_food'
 require 'nokogiri'
 require 'open-uri'
 
@@ -17,14 +18,8 @@ class Controller
   end
 
   def create
-    attr = {}
-    # Get the recipe name from the user
-    attr[:name] = @view.ask_for("name")
-    # Get the recipe description from the user
-    attr[:description] = @view.ask_for("description")
-
-    attr[:prep_time] = @view.ask_for("description")
-    attr[:difficulty] = @view.ask_for("description")
+    # ask user for recipe details
+    attr = @view.ask_for_recipe
     # Create a recipe instance with the information
     recipe = Recipe.new(attr)
     # Store it in the cookbook
@@ -49,22 +44,22 @@ class Controller
     keyword = @view.ask_for("search term")
     # 2. Make an HTTP request to the recipe's website with our keyword
     # 3. Parse the HTML document to extract the first 5 recipes suggested and store them in an Array
-    html = open("https://www.bbcgoodfood.com/search/recipes?query=#{keyword}").read
-    recipes = []
-    doc = Nokogiri::HTML(html, nil, 'utf-8')
-    doc.search('.node-recipe').first(5).each do |node|
-      attr = {}
-      attr[:name] = node.search('.teaser-item__title').text.strip
-      attr[:description] = node.search('.field-item').text.strip
-      attr[:prep_time] = node.search('.teaser-item__info-item--total-time').text.strip
-      attr[:difficulty] = node.search('.teaser-item__info-item--skill-level').text.strip
-      recipes << Recipe.new(attr)
-    end
+    # Do all of the above in the below service object
+    recipes = ScrapeBbcGoodFood.call(keyword)
     # 4. Display them in an indexed list
     @view.display(recipes)
     # 5. Ask the user which recipe they want to import (ask for an index)
     index = @view.ask_for("index of recipe to add").to_i - 1
     # 6. Add it to the `Cookbook`
     @cookbook.add_recipe(recipes[index])
+  end
+
+  def complete
+    # list all the recipes for a user to view
+    list
+    # ask a user for what recipe they want to mark as complete
+    recipe_index = @view.ask_for("index to mark completed").to_i - 1
+    # tell the cookbook to mark said recipe as complete
+    @cookbook.complete_recipe(recipe_index)
   end
 end

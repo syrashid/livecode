@@ -1,11 +1,14 @@
-name,description,prep_time,difficulty
-Crumpets,Crumpets description,,
-Beans & Bacon breakfast,Beans description,,
-Plum pudding,Pudding description,,
-Apple pie,Apple pie description,,
-Christmas crumble,Crumble description,,
-Keto Cookies,Awful non tasty ingredients,,
-Blueberry clafoutis,"Gordon Ramsay’s dessert is bursting with berry and almond flavours, and can be prepared well in advance - in fact, it's best to make the batter 24 hours ahead",,
-Easy chocolate fudge cake,Need a guaranteed crowd-pleasing cake that's easy to make? This super squidgy chocolate fudge cake with smooth icing is an instant baking win...,,
-Ultimate chocolate cake,"Indulge yourself with this ultimate chocolate cake recipe that is beautifully moist, rich and fudgy. Perfect for a celebration or an afternoon tea",,
-American blueberry pancakes,"Light, fluffy and fruity, these pancakes are a US classic. Serve them stacked high with syrup and extra fruit",35 mins,Easy
+name,description,prep_time,difficulty,status
+Crumpets,Crumpets description,,,false
+Beans & Bacon breakfast,Beans description,,,false
+Plum pudding,Pudding description,,,false
+Apple pie,Apple pie description,,,false
+Christmas crumble,Crumble description,,,false
+Keto Cookies,Awful non tasty ingredients,,,false
+Blueberry clafoutis,"Gordon Ramsay’s dessert is bursting with berry and almond flavours, and can be prepared well in advance - in fact, it's best to make the batter 24 hours ahead",,,false
+Easy chocolate fudge cake,Need a guaranteed crowd-pleasing cake that's easy to make? This super squidgy chocolate fudge cake with smooth icing is an instant baking win...,,,false
+Ultimate chocolate cake,"Indulge yourself with this ultimate chocolate cake recipe that is beautifully moist, rich and fudgy. Perfect for a celebration or an afternoon tea",,,true
+American blueberry pancakes,"Light, fluffy and fruity, these pancakes are a US classic. Serve them stacked high with syrup and extra fruit",35 mins,Easy,true
+Cookies,Cookie description,35 min,Difficult,false
+Almond butter,"If you think there's no spread quite like peanut butter, try this version, sweetened with honey, as an energy-boosting snack",25 mins,Easy,false
+American blueberry pancakes,"Light, fluffy and fruity, these pancakes are a US classic. Serve them stacked high with syrup and extra fruit",35 mins,Easy,false
