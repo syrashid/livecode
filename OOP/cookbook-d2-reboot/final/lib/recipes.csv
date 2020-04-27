@@ -1,10 +1,11 @@
 name,description,prep_time,status,difficulty
-Crumpets,Crumpets description,,,
-Beans & Bacon breakfast,Beans description,,,
-Plum pudding,Pudding description,,,
-Apple pie,Apple pie description,,,
-Christmas crumble,Crumble description,,,
-Pancakes,Water and Flour,,,
+Crumpets,Crumpets description,,false,
+Beans & Bacon breakfast,Beans description,,false,
+Plum pudding,Pudding description,,false,
+Apple pie,Apple pie description,,false,
+Christmas crumble,Crumble description,,false,
+Pancakes,Water and Flour,,false,
 cookies,cookies description,5 hours,true,hard
-,Need a guaranteed crowd-pleasing cake that's easy to make? This super squidgy chocolate fudge cake with smooth icing is an instant baking win...,55 mins,,Easy
-Ultimate chocolate cake,"Indulge yourself with this ultimate chocolate cake recipe that is beautifully moist, rich and fudgy. Perfect for a celebration or an afternoon tea",2 hours and 10 mins,,Easy
+,Need a guaranteed crowd-pleasing cake that's easy to make? This super squidgy chocolate fudge cake with smooth icing is an instant baking win...,55 mins,false,Easy
+Ultimate chocolate cake,"Indulge yourself with this ultimate chocolate cake recipe that is beautifully moist, rich and fudgy. Perfect for a celebration or an afternoon tea",2 hours and 10 mins,false,Easy
+Blueberry clafoutis,"Gordon Ramsay’s dessert is bursting with berry and almond flavours, and can be prepared well in advance - in fact, it's best to make the batter 24 hours ahead",40 mins,"",More effort
