@@ -4,6 +4,7 @@ class View
     puts " -------------------------- "
     recipes.each_with_index do |recipe, index|
       puts "#{index + 1}. #{recipe.name}: #{recipe.description}"
+      puts "Time: #{recipe.prep_time} - Difficulty: #{recipe.difficulty}"
     end
   end
 

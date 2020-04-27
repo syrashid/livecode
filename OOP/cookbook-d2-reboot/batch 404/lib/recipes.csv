@@ -1,9 +1,11 @@
-name,description
-Crumpets,Crumpets description
-Beans & Bacon breakfast,Beans description
-Plum pudding,Pudding description
-Apple pie,Apple pie description
-Christmas crumble,Crumble description
-Keto Cookies,Awful non tasty ingredients
-Blueberry clafoutis,"Gordon Ramsay’s dessert is bursting with berry and almond flavours, and can be prepared well in advance - in fact, it's best to make the batter 24 hours ahead"
-Easy chocolate fudge cake,Need a guaranteed crowd-pleasing cake that's easy to make? This super squidgy chocolate fudge cake with smooth icing is an instant baking win...
+name,description,prep_time,difficulty
+Crumpets,Crumpets description,,
+Beans & Bacon breakfast,Beans description,,
+Plum pudding,Pudding description,,
+Apple pie,Apple pie description,,
+Christmas crumble,Crumble description,,
+Keto Cookies,Awful non tasty ingredients,,
+Blueberry clafoutis,"Gordon Ramsay’s dessert is bursting with berry and almond flavours, and can be prepared well in advance - in fact, it's best to make the batter 24 hours ahead",,
+Easy chocolate fudge cake,Need a guaranteed crowd-pleasing cake that's easy to make? This super squidgy chocolate fudge cake with smooth icing is an instant baking win...,,
+Ultimate chocolate cake,"Indulge yourself with this ultimate chocolate cake recipe that is beautifully moist, rich and fudgy. Perfect for a celebration or an afternoon tea",,
+American blueberry pancakes,"Light, fluffy and fruity, these pancakes are a US classic. Serve them stacked high with syrup and extra fruit",35 mins,Easy

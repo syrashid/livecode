@@ -32,9 +32,9 @@ class Cookbook
 
   def write_csv
     CSV.open(@file_path, 'wb') do |csv|
-      csv << ["name", "description"]
+      csv << ["name", "description", "prep_time", "difficulty"]
       @recipes.each do |recipe|
-        csv << [recipe.name, recipe.description, recipe.prep_time]
+        csv << [recipe.name, recipe.description, recipe.prep_time, recipe.difficulty]
       end
     end
   end

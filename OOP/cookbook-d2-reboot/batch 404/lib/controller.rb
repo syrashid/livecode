@@ -17,12 +17,16 @@ class Controller
   end
 
   def create
+    attr = {}
     # Get the recipe name from the user
-    name = @view.ask_for("name")
+    attr[:name] = @view.ask_for("name")
     # Get the recipe description from the user
-    description = @view.ask_for("description")
+    attr[:description] = @view.ask_for("description")
+
+    attr[:prep_time] = @view.ask_for("description")
+    attr[:difficulty] = @view.ask_for("description")
     # Create a recipe instance with the information
-    recipe = Recipe.new(name: name, description: description)
+    recipe = Recipe.new(attr)
     # Store it in the cookbook
     @cookbook.add_recipe(recipe)
     # list the recipes
@@ -52,6 +56,8 @@ class Controller
       attr = {}
       attr[:name] = node.search('.teaser-item__title').text.strip
       attr[:description] = node.search('.field-item').text.strip
+      attr[:prep_time] = node.search('.teaser-item__info-item--total-time').text.strip
+      attr[:difficulty] = node.search('.teaser-item__info-item--skill-level').text.strip
       recipes << Recipe.new(attr)
     end
     # 4. Display them in an indexed list
