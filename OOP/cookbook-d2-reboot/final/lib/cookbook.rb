@@ -22,18 +22,24 @@ class Cookbook
     write_csv
   end
 
+  def complete_recipe(index)
+    @recipes[index].status = true
+    write_csv
+  end
+
   private
 
   def load_csv
-    CSV.foreach(@file_path) do |row|
-      @recipes << Recipe.new(row[0], row[1])
+    CSV.foreach(@file_path, headers: :first_row, header_converters: :symbol) do |row|
+      @recipes << Recipe.new(row)
     end
   end
 
   def write_csv
     CSV.open(@file_path, 'wb') do |csv|
+      csv << [ "name", "description", "prep_time", "status", "difficulty"]
       @recipes.each do |recipe|
-        csv << [recipe.name, recipe.description]
+        csv << [recipe.name, recipe.description, recipe.prep_time, recipe.status, recipe.difficulty]
       end
     end
   end
