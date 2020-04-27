@@ -20,7 +20,7 @@ class Controller
     # Get the recipe description from the user
     description = @view.ask_for("description")
     # Create a recipe instance with the information
-    recipe = Recipe.new(name, description)
+    recipe = Recipe.new(name: name, description: description)
     # Store it in the cookbook
     @cookbook.add_recipe(recipe)
     # list the recipes
