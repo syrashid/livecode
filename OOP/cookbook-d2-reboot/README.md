@@ -156,7 +156,7 @@ Once you're done with the "Search", try to add a feature to mark a recipe as don
 
 Again, this new property should be stored in the csv file and displayed when listing recipes.
 
-Try modifying the web-import feature so that you can import recipes with a given difficulty (you might want to make this argument optional keeping the old import feature possible).
+Try modi(you might want to make this argument optional keeping the old import feature possible).
 
 ## 5 - (Optional) Service
 
