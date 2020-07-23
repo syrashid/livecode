@@ -10,6 +10,14 @@
 # Start by working out the psuedo code together, send to everyone on slack
 
 def encrypt(text)
+  # 1. Define an array with the 26 letters of the alphabet (in capital letters)
+  # 2. Split the text in a `letters` array
+  # 3. Iterate over letters, for each letter, test its inclusion in the alphabet
+  # 4. Map the letter to its left-shift or to itself
+  # 5. Join the mapped array and return it
+end
+
+def encrypt(text)
   # create a key, and index every letter of the alphabet
   key = ('A'..'Z').to_a
   # split the text into a character array
@@ -65,5 +73,7 @@ end
 def decode(text)
   encrypt_variable(text, -3)
 end
+
+puts decode("TB'OB XZQRXIIV GRPQ OBXIIV ARJY XKA XZQRXIIV YBIFBSB TEXQ ZLJBP LRQ LC EFP JLRQE")
 
 

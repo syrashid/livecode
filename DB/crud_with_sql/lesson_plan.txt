@@ -5,17 +5,22 @@ You are given a tasks.db database with one task (id = 1), a task.rb file to comp
 
 Before we start, let's make sure we have a strong understanding.  What is the input, and what is the output?
 
-X Implement the READ logic to find a given task (by its id)
-X Implement the CREATE logic in a save instance method
-X Implement the UPDATE logic in the same method
-X Implement the READ logic to retrieve all tasks (what type of method is it?)
-X Implement the DESTROY logic on a task
+ x Implement the READ logic to find a given task (by its id)
+ x Implement the CREATE logic in a save instance method
+ x Implement the UPDATE logic in the same method
+ x Implement the READ logic to retrieve all tasks (what type of method is it?)
+ Implement the DESTROY logic on a task
+ Walk thru of what's been given so far
 
 
-Talking Points
+Talking Points (MAKE SURE SY COVERS THESE)
 - Iterative approach to problem saving
+- Using your debugging tools
+- Principles of refactoring (proof of concept, improve performance, proof of beauty)
+- TDD (refresher)
 - In our MVC Model, what is the DB synonomous to?
-- Why do we pass parameters when we interact with our DB, what are we trying to prevent?
+- Why do we sanitize parameters when we interact with our DB, what are we trying to prevent?
 - Difference between .new and .save
 - What is the role of save to do here (two components)
+- How AR works in the backend (if time permits)
 
