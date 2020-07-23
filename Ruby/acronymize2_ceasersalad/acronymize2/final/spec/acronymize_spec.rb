@@ -1,9 +1,15 @@
 require_relative "../acronymize"
 
+# First portion should be identifying the function you want to write tests for
 describe "#acronymize" do
+  # each it .. do .. end block will describe one test
+  # This first portion is what's written in green or red when you run your tests and describes the behavior of the test
   it "returns an empty string when passed an empty string" do
+    # Where you test your actual input, this is show in the get: portion of the test
     actual = acronymize("")
+    # Where you put down your expected behavior
     expected = ""
+    # Finally the comparison of the two
     expect(actual).to eq(expected) # passes if `actual == expected`
   end
 
