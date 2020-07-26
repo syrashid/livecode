@@ -8,7 +8,7 @@ def french_ssn_info(ssn)
   # break up ssn into component pieces
   match_data = ssn.to_s.match(pattern)
   # 👀 Peep the method valid_key? what is it doing here?
-  if match_data & valid_key?(ssn, match_data[:key])
+  if match_data && valid_key?(ssn, match_data[:key])
     # translate the meaning of each component
     gender = match_data[:gender] == "1" ? "man" : "woman"
     month = Date::MONTHNAMES[match_data[:month].to_i]

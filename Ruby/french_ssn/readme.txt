@@ -23,14 +23,13 @@ french_ssn_info("123")
 => "The number is invalid"
 
 >> IMPORTANT TOPICS FOR SY TO COVER <<
-1) Quick run thru of slides
-2) Why RegEx is useful, what two contexts they are useful?
-3) Value of TDD, review the concept of rspec
-4) Guard clauses in our code
-5) Matchdata and capture groups & their importance
-6) Requiring things in Ruby
-7) Sneak peak into parsing
-8) Coding Sequence (tests > psuedocode > code for concept > code for performance > code for elegance)
+1) Why RegEx is useful, what two contexts they are useful?
+2) Value of TDD, review the concept of rspec
+3) Guard clauses in our code
+4) Matchdata and capture groups & their importance
+5) Requiring things in Ruby
+6) Sneak peak into parsing (Think of how we got the departments)
+7) Coding Sequence (tests > psuedocode > code for concept > code for performance > code for elegance)
 
 >> WHAT WE ALREADY HAVE <<
 1) file structure set up for spec
