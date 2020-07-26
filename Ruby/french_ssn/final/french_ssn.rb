@@ -4,10 +4,13 @@ require 'YAML'
 SSN_PATTERN = /\A(?<gender>[12])\s?(?<year>\d{2})\s?(?<month>0[1-9]|1[0-2])\s?(?<zip>\d{2})\s?(\d{3})\s?(\d{3})\s?(?<key>\d{2})\z/
 
 def french_ssn_info(ssn)
+  # guard clause
   return "The number is invalid" if !(ssn.is_a? String) || ssn.empty?
 
+  # match our pattern
   match_data = ssn.match(SSN_PATTERN)
 
+  #break the little pieces
   gender = match_data[:gender] == "1" ? "man" : "woman"
 
   # Embrace the laziness, coders are lazy, look up ruby datemonths from strings

@@ -30,6 +30,7 @@ french_ssn_info("123")
 5) Requiring things in Ruby
 6) Sneak peak into parsing (Think of how we got the departments)
 7) Coding Sequence (tests > psuedocode > code for concept > code for performance > code for elegance)
+8) Helper methods
 
 >> WHAT WE ALREADY HAVE <<
 1) file structure set up for spec
