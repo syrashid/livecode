@@ -46,12 +46,23 @@
 #   end
 # end
 
+# Five different cases we want to test for
+# All the same
+# Two Same + Joker
+# Two Joker + Anything
+# Two same + Not joker
+# Three different symbols
+
+# ^ After completing the above and refactoring start writing score
+# After score is implemented, go back in and write the tests for all of the other cases
+
+
 require_relative '../slot_machine'
 
 def test_scenario(reels, expected_score)
   it "returns #{expected_score} for |#{reels[0]}|#{reels[1]}|#{reels[2]}|" do
-    slot_machine = SlotMachine.new
-    score = slot_machine.score(reels)
+    slot_machine = SlotMachine.new(reels)
+    score = slot_machine.score
     expect(score).to eq(expected_score)
   end
 end
@@ -59,8 +70,8 @@ end
 describe SlotMachine do
   describe '#score' do
     it 'returns 0 for three different symbols' do
-      slot_machine = SlotMachine.new
-      score = slot_machine.score(%w[joker star bell])
+      slot_machine = SlotMachine.new(%w[joker star bell])
+      score = slot_machine.score
       expect(score).to eq(0)
     end
 

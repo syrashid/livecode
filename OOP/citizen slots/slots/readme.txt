@@ -26,8 +26,9 @@ What are the biggest steps we need, can we break them down further
 Let's think about the two main components here we need to test
 
 >> IMPORTANT TOPICS SY TO COVER <<
-1) Make the code work for you, there are no rules to this, create as needed
+1) Make the code work for you, there are no rules to this, create as needed (tests)
 2) Look for patterns, avoid hardcoding whenever possible
+3) Helper functions as private methods
 
 >> WHAT WE HAVE <<
 - Again nothing, except for a spec struture
