@@ -21,7 +21,7 @@ Let's think about the two main components here we need to test
 2) Navigating an html doc with Nokogiri (https://learn.co/lessons/scraping-reading)
 3) Understanding how to use the Chrome DevTools, extremely powerful for when we explore JS and CSS, but for now we're more concerned with it's ability to let us inspect things
 4) Separation of Concerns - and why this is important, keep the end in mind
-5) Combinators and the three types we need to know (descendant, child, adjacent)
+5) Combinators and the three types we need to know (descendant, child, adjacent) (SEND ARTICLE ON THIS)
 
 >> WHAT WE ALREADY HAVE <<
 1) YAML example file

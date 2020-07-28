@@ -2,9 +2,9 @@ require 'open-uri'
 require 'nokogiri'
 
 def fetch_movie_urls
-html_top_250 = open('https://www.imdb.com/chart/top').read
-doc = Nokogiri::HTML(html_top_250)
-doc.search('.titleColumn a').first(5).map { |movie_url| 'https://www.imdb.com' + movie_url['href'] }
+  html_top_250 = open('https://www.imdb.com/chart/top').read
+  doc = Nokogiri::HTML(html_top_250)
+  doc.search('.titleColumn a').first(5).map { |movie_url| 'https://www.imdb.com' + movie_url['href'] }
 end
 
 def scrape_movie(url)
