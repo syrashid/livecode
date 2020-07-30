@@ -6,7 +6,7 @@ describe Pokemon do
   describe 'initialize' do
     it 'creates an instance of the Pokemon class' do
       sparky = Pokemon.new('Sparky', 50)
-      expect(sparky).to be_a(Pokemon)
+      expect(sparky).to be_a(Pokemon) # New matcher for students talk about this and show them the other types
     end
   end
 
