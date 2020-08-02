@@ -30,7 +30,8 @@ class Cookbook
   private
 
   def load_csv
-    CSV.foreach(@file_path, headers: :first_row, header_converters: :symbol) do |row|
+    csv_options = { headers: :first_row, header_converters: :symbol }
+    CSV.foreach(@file_path, csv_options) do |row|
       @recipes << Recipe.new(row)
     end
   end

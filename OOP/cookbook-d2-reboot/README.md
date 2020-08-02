@@ -23,7 +23,7 @@ Before starting, run your pasted cookbook to make sure that day one's user actio
 ruby lib/app.rb
 ```
 
-## Pre1 - Change over recipes to take a single attributes hash
+## Pre1 - Change over recipes to take a single attributes hash, to make our lives easier
 
 ## 1 - Import recipes from the web
 
@@ -130,15 +130,7 @@ Think about the **class** that should be used to hold information parsed from th
 
 Try it live running your Cookbook!
 
-## 2 - Add a `@prep_time` property to `Recipe`
-
-This new property should be:
-
-- Stored in the CSV
-- Parsed from the web when importing a recipe
-- Printed when listing the recipes
-
-## 3 - (User Action) Mark a recipe as done
+## 2 - (User Action) Mark a recipe as done
 
 Once you're done with the "Search", try to add a feature to mark a recipe as done:
 
@@ -151,6 +143,14 @@ Once you're done with the "Search", try to add a feature to mark a recipe as don
 4. [X] Apple pie (60 min)
 5. [ ] Christmas crumble (30 min)
 ```
+
+## 3 - Add a `@prep_time` property to `Recipe`
+
+This new property should be:
+
+- Stored in the CSV
+- Parsed from the web when importing a recipe
+- Printed when listing the recipes
 
 ## 4 - Add a `@difficulty` property to `Recipe`
 
