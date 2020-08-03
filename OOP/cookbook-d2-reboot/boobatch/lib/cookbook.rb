@@ -27,7 +27,12 @@ class Cookbook
   def load_csv
     # GOAL: Load recipes from csv file
     CSV.foreach(@file_path) do |row|
-      @recipes << Recipe.new(row[0], row[1])
+      @recipes << Recipe.new(
+        { name: row[0],
+          description: row[1],
+          prep_time: row[2],
+          difficulty: row[3]
+        })
     end
   end
 
@@ -36,7 +41,7 @@ class Cookbook
     csv_options = { col_sep: ',', force_quotes: true, quote_char: '"' }
     CSV.open(@file_path, 'wb', csv_options) do |csv|
       @recipes.each do |recipe|
-        csv << [recipe.name, recipe.description]
+        csv << [recipe.name, recipe.description, recipe.prep_time, recipe.difficulty]
       end
     end
   end
