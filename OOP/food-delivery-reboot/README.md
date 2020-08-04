@@ -128,3 +128,6 @@ We haven't done any **deleting** yet. How would you implement these additional u
 
 - As a manager, I can delete a meal
 - As a manager, I can delete a customer
+
+
+#### All Hail [KING RUI](https://github.com/rodloboz) For this Readme 
