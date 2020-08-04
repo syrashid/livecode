@@ -1,5 +1,5 @@
 class Meal
-  attr_accessor :id  # read and write :id
+  attr_accessor :id # read and write :id
   attr_reader :name, :price
 
   # It makes sense that the class would know

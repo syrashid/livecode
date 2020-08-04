@@ -33,7 +33,6 @@ class MealRepository
     @meals
   end
 
-
   def find(id)
     # We use the nifty find iterator here to find the first
     # instance that has the id we pass

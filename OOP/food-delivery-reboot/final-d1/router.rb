@@ -1,5 +1,5 @@
 class Router
-  def initialize(attr={})
+  def initialize(attr = {})
     # Store ALL controllers in instance variables
     # so that I can use them throughout the Router
     @meals_controller = meals_controller

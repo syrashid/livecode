@@ -3,7 +3,7 @@ class MealsView
     meals.each_with_index do |meal, index|
       # We use to_s as a clean way for the element
       # in question to present it's data
-      puts "#{index + 1}. #{meal.to_s}"
+      puts "#{index + 1}. #{meal}"
     end
   end
 
