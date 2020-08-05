@@ -3,11 +3,11 @@ require_relative "base_repository"
 require_relative "../models/order"
 
 class OrderRepository < BaseRepository
-  def initialize(csv_file, meal_repository, customer_repository, employee_repository)
+  def initialize(csv_file, attr={})
     # Go through the trouble of debugging this if these were flipped
-    @meal_repository = meal_repository
-    @customer_repository = customer_repository
-    @employee_repository = employee_repository
+    @meal_repository = attr[:meal_repository]
+    @customer_repository = attr[:customer_repository]
+    @employee_repository = attr[:employee_repository]
     super(csv_file)
   end
 

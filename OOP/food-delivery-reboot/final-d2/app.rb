@@ -50,6 +50,21 @@ controllers = {
   sessions_controller: sessions_controller
 }
 
+# In order to create an OrdersController, I need to...
+# have a string with the Orders CSV filepath...
+ORDERS_CSV_FILE = File.join(__dir__, "data/orders.csv")
+# and a controllers hash so that I can use it to create an OrderRepository...
+order_repository = OrderRepository.new(EMPLOYEES_CSV_FILE, controllers)
+# that can be used to create the OrdersController with all the repos:
+repositories = {
+  customers_repository: customers_repository,
+  meals_repository: meals_repository,
+  sessions_repository: sessions_repository,
+  order_repository: order_repository
+}
+
+orders_controller = OrdersController.new(repositories)
+
 router = Router.new(controllers)
 
 # Start the program:
