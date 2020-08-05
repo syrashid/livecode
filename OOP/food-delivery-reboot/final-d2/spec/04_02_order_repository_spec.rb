@@ -1,5 +1,6 @@
 require "fileutils"
 require_relative "support/csv_helper"
+require 'pry-byebug'
 
 begin
   require_relative "../app/repositories/meal_repository"
