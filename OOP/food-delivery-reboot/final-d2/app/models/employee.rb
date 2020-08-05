@@ -25,4 +25,8 @@ class Employee
   def to_array
     [@id, @name, @password, @role]
   end
+
+  def to_s
+    username
+  end
 end

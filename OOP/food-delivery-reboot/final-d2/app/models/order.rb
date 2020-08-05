@@ -25,4 +25,8 @@ class Order
   def to_array
     [@id, @delivered, @meal.id, @customer.id, employee.id]
   end
+
+  def to_s
+    "#{@employee.username} must deliver #{@meal.name} to #{@customer.name}"
+  end
 end

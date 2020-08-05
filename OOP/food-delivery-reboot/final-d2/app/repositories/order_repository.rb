@@ -5,9 +5,9 @@ require_relative "../models/order"
 class OrderRepository < BaseRepository
   def initialize(csv_file, attr={})
     # Go through the trouble of debugging this if these were flipped
-    @meal_repository = attr[:meal_repository]
-    @customer_repository = attr[:customer_repository]
-    @employee_repository = attr[:employee_repository]
+    @meal_repository = attr[:meal_repo]
+    @customer_repository = attr[:customer_repo]
+    @employee_repository = attr[:employee_repo]
     super(csv_file)
   end
 
@@ -17,7 +17,7 @@ class OrderRepository < BaseRepository
 
   def mark_as_delivered(order)
     order.deliver!
-    save_to_csv
+    save_csv
   end
 
   def my_undelivered_orders(employee)

@@ -7,11 +7,13 @@ require_relative 'app/models/employee'
 require_relative 'app/repositories/meal_repository'
 require_relative 'app/repositories/customer_repository'
 require_relative 'app/repositories/employee_repository'
+require_relative 'app/repositories/order_repository'
 
 # Require all controllers
 require_relative 'app/controllers/meals_controller'
 require_relative 'app/controllers/customers_controller'
 require_relative 'app/controllers/sessions_controller'
+require_relative 'app/controllers/orders_controller'
 
 # Require the router
 require_relative "router"
@@ -50,20 +52,24 @@ controllers = {
   sessions_controller: sessions_controller
 }
 
+repositories = {
+  customer_repo: customer_repository,
+  meal_repo: meal_repository,
+  employee_repo: employee_repository
+}
+
 # In order to create an OrdersController, I need to...
 # have a string with the Orders CSV filepath...
 ORDERS_CSV_FILE = File.join(__dir__, "data/orders.csv")
 # and a controllers hash so that I can use it to create an OrderRepository...
-order_repository = OrderRepository.new(EMPLOYEES_CSV_FILE, controllers)
+order_repository = OrderRepository.new(ORDERS_CSV_FILE, repositories)
 # that can be used to create the OrdersController with all the repos:
-repositories = {
-  customers_repository: customers_repository,
-  meals_repository: meals_repository,
-  sessions_repository: sessions_repository,
-  order_repository: order_repository
-}
+repositories[:order_repo] = order_repository
 
 orders_controller = OrdersController.new(repositories)
+
+controllers[:orders_controller] = orders_controller
+
 
 router = Router.new(controllers)
 

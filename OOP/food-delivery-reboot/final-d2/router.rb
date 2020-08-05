@@ -5,6 +5,7 @@ class Router
     @meals_controller = attr[:meals_controller]
     @customers_controller = attr[:customers_controller]
     @sessions_controller = attr[:sessions_controller]
+    @orders_controller = attr[:orders_controller]
     @running = true
   end
 
@@ -50,8 +51,10 @@ class Router
     puts "2. List all meals"
     puts "3. Add new customer"
     puts "4. List all customers"
-    puts "5. Logout"
-    puts "6. Exit"
+    puts "5. Add new order"
+    puts "6. List all undelivered orders"
+    puts "7. Logout"
+    puts "8. Exit"
     print "> "
   end
 
@@ -59,8 +62,8 @@ class Router
     puts "--------------------"
     puts "---- EMP MENU 👦 ---"
     puts "--------------------"
-    puts "1. Delivery guy action #1"
-    puts "2. Delivery guy action #2"
+    puts "1. List my undelivered orders"
+    puts "2. Mark order as deleivered"
     puts "3. Logout"
     puts "4. Exit"
     print "> "
@@ -72,16 +75,18 @@ class Router
     when 2 then @meals_controller.list
     when 3 then @customers_controller.add
     when 4 then @customers_controller.list
-    when 5 then logout!
-    when 6 then stop!
+    when 5 then @orders_controller.add
+    when 6 then @orders_controller.list_undelivered_orders
+    when 7 then logout!
+    when 8 then stop!
     else puts "Try again..."
     end
   end
 
   def delivery_guy_action(choice)
     case choice
-    when 1 then puts "Complete delivery action 1"
-    when 2 then puts "Complete delivery action 2"
+    when 1 then @orders_controller.list_my_orders(@current_user)
+    when 2 then @orders_controller.mark_as_delivered(@current_user)
     when 3 then logout!
     when 4 then stop!
     else puts "Try again..."
