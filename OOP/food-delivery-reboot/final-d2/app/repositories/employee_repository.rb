@@ -5,6 +5,7 @@ require_relative "../models/employee"
 
 class EmployeeRepository < BaseRepository
 
+  # These two methods are needed by the employee repository and extend the base repository class
   def all_delivery_guys
     @elements.select { |element| element.delivery_guy? }
   end
@@ -23,6 +24,4 @@ class EmployeeRepository < BaseRepository
       @elements << Employee.new(row)
     end
   end
-
-
 end
