@@ -13,6 +13,8 @@ class EmployeeRepository < BaseRepository
     @elements.find { |element| element.username == username }
   end
 
+  undef create
+
   private
 
   def load_csv
@@ -21,4 +23,6 @@ class EmployeeRepository < BaseRepository
       @elements << Employee.new(row)
     end
   end
+
+
 end
