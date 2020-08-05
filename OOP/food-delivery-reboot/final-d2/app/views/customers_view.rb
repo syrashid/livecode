@@ -1,8 +1,7 @@
 class CustomersView
   def display(customers)
     customers.each_with_index do |customer, index|
-      # We use to_s as a clean way for the element
-      # in question to present it's data
+      # String interpolation by default calls to_s on whatever it is trying to interpolate, when we wrote over to_s we choose to return a string that displays the information for the element in the way we desire
       puts "#{index + 1}. #{customer}"
     end
   end

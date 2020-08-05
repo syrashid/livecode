@@ -1,6 +1,6 @@
 require_relative "../views/meals_view"
 require_relative "../views/customers_view"
-require_relative "../views/sessions_view"
+require_relative "../views/employees_view"
 require_relative "../views/orders_view"
 require 'pry-byebug'
 
@@ -12,7 +12,7 @@ class OrdersController
     @order_repo = attr[:order_repo]
     @meals_view = MealsView.new
     @customers_view = CustomersView.new
-    @sessions_view = SessionsView.new
+    @sessions_view = EmployeesView.new
     @orders_view = OrdersView.new
   end
 
@@ -20,7 +20,6 @@ class OrdersController
     meal = select_meal
     customer = select_customer
     employee = select_employee
-    binding.pry
     order = Order.new(meal: meal, customer: customer, employee: employee)
     @order_repo.create(order)
   end
@@ -63,7 +62,7 @@ class OrdersController
   def select_employee
     @orders_view.prompt_for("employee")
     employees = @employee_repo.all_delivery_guys
-    @sessions_view.display(employees)
+    @employees_view.display(employees)
     index = @orders_view.ask_user_for_index
     return employees[index]
   end
