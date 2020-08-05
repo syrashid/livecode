@@ -1,0 +1,5 @@
+id,username,password,role
+1,paul,password,manager
+2,john,holla123,delivery_guy
+3,ringo,secret,delivery_guy
+4,matty_ice,password,manager

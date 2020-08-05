@@ -26,6 +26,6 @@ class Customer
   # We want to teach our model to display its data as
   # a string so that we can use it in the View
   def to_s
-    "#{name} | Address: #{address}"
+    "#{self.name} | Address: #{self.address}"
   end
 end
