@@ -13,6 +13,7 @@ class Employee
     @role = attributes[:role]
   end
 
+  # Behaviors we need for our model to tell us what kind of role they have
   def manager?
     @role == "manager"
   end
