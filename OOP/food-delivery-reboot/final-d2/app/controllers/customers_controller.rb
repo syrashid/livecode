@@ -1,7 +1,6 @@
 require_relative "../views/customers_view"
 require_relative "../models/customer"
 
-# Are the controllers for meals and for customers very similar?
 class CustomersController
   def initialize(customer_repository)
     @customer_repository = customer_repository
