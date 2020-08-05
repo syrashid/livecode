@@ -7,11 +7,13 @@ require_relative 'app/models/employee'
 require_relative 'app/repositories/meal_repository'
 require_relative 'app/repositories/customer_repository'
 require_relative 'app/repositories/employee_repository'
+require_relative 'app/repositories/order_repository'
 
 # Require all controllers
 require_relative 'app/controllers/meals_controller'
 require_relative 'app/controllers/customers_controller'
 require_relative 'app/controllers/sessions_controller'
+require_relative 'app/controllers/orders_controller'
 
 # Require the router
 require_relative "router"
@@ -40,10 +42,24 @@ employee_repository = EmployeeRepository.new(EMPLOYEES_CSV_FILE)
 sessions_controller = SessionsController.new(employee_repository)
 
 # Organize all controllers in a hash to be used in the Router:
+
+
+repos = {
+  meal_repo: meal_repository,
+  customer_repo: customer_repository,
+  employee_repo: employee_repository
+}
+
+ORDERS_CSV_FILE = File.join(__dir__, "data/orders.csv")
+order_repository = OrderRepository.new(ORDERS_CSV_FILE, repos)
+repos[:order_repo] = order_repository
+orders_controller = OrdersController.new(repos)
+
 controllers = {
   customers_controller: customers_controller,
   meals_controller: meals_controller,
-  sessions_controller: sessions_controller
+  sessions_controller: sessions_controller,
+  orders_controller: orders_controller
 }
 
 router = Router.new(controllers)

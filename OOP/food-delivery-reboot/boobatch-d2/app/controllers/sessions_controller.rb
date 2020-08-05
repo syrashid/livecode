@@ -22,6 +22,4 @@ class SessionsController
       login
     end
   end
-
-
 end
