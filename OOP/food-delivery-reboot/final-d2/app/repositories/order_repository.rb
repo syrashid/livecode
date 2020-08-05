@@ -12,7 +12,7 @@ class OrderRepository < BaseRepository
   end
 
   def undelivered_orders
-    @orders.reject { |order| order.delivered? }
+    @elements.reject { |order| order.delivered? }
   end
 
   def mark_as_delivered(order)
@@ -21,7 +21,7 @@ class OrderRepository < BaseRepository
   end
 
   def my_undelivered_orders(employee)
-    @orders.select { |order| order.employee == employee && !order.delivered? }
+    @elements.select { |order| order.employee == employee && !order.delivered? }
   end
 
   private
