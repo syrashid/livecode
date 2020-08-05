@@ -12,7 +12,7 @@ class OrdersController
     @order_repo = attr[:order_repo]
     @meals_view = MealsView.new
     @customers_view = CustomersView.new
-    @sessions_view = EmployeesView.new
+    @employees_view = EmployeesView.new
     @orders_view = OrdersView.new
   end
 

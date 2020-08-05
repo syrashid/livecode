@@ -5,3 +5,4 @@ id,delivered,meal_id,customer_id,employee_id
 4,true,5,2,3
 5,false,1,1,2
 6,false,6,4,3
+7,true,6,5,3
