@@ -32,6 +32,7 @@ class Cookbook
   def load_csv
     csv_options = { headers: :first_row, header_converters: :symbol }
     CSV.foreach(@file_path, csv_options) do |row|
+      row[:status] = row[:status] == "true"
       @recipes << Recipe.new(row)
     end
   end
