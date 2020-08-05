@@ -12,6 +12,8 @@ class Customer
     @address = attributes[:address]
   end
 
+  # We use this #to_array method to abstract our repository classes,
+  # It makes sense the instance should know how to pass itself as relevant information for a csv row
   def to_array
     [@id, @name, @address]
   end
