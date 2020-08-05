@@ -13,10 +13,12 @@ class Router
     puts "Welcome to the Le Wagon Pub!"
     puts "----------------------------"
     while @running
-      # First step is to check weather or not the current
+      # First step is to check whether or not the current
       # user is an employee of the restaurant
       @current_user = @sessions_controller.login
+      # We implement this second loop to allow for a user to logout and return back to the session login prompts
       while @current_user
+        # Depending on role we will render different actions for the user to choose from, a la role based access
         if @current_user.manager?
           route_manager_action
         else
@@ -29,6 +31,7 @@ class Router
 
   private
 
+  # Our two routing options based off the role
   def route_manager_action
     print_manager_menu
     choice = gets.chomp.to_i
@@ -43,6 +46,7 @@ class Router
     delivery_guy_action(choice)
   end
 
+  # Our two option printing methods
   def print_manager_menu
     puts "--------------------"
     puts "---- MGR MENU 🧔 ---"
@@ -69,6 +73,9 @@ class Router
     print "> "
   end
 
+  # Dispatch the User REQUEST to the
+  # SPECIFIC controller action/method
+  # that implements what the User wants to do
   def manager_action(choice)
     case choice
     when 1 then @meals_controller.add
