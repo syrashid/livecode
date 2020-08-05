@@ -27,6 +27,6 @@ class Order
   end
 
   def to_s
-    "#{@employee.username} must deliver #{@meal.name} to #{@customer.name}"
+    "#{@employee.username.capitalize} must deliver #{@meal.name} to #{@customer.name}"
   end
 end
