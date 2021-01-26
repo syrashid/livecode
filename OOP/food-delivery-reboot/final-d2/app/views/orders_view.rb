@@ -1,10 +1,6 @@
-class OrdersView
-  def display(orders)
-    orders.each_with_index do |order, index|
-      puts "#{index + 1}. #{order}"
-    end
-  end
+require_relative 'base_view'
 
+class OrdersView < BaseView
   def ask_user_for_index
     puts "Index?"
     print "> "

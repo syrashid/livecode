@@ -8,5 +8,4 @@ class SessionsView
   def print_wrong_credentials
     puts "Wrong credentials... Try again"
   end
-
 end
