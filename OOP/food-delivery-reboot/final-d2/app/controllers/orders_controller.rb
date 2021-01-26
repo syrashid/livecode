@@ -36,12 +36,13 @@ class OrdersController
   end
 
   def list_my_orders(current_user)
-    list_my_undelivered_orders(current_user)
+    orders = @order_repo.my_undelivered_orders(current_user)
+    @orders_view.display(orders)
   end
 
   def mark_as_delivered(current_user)
     # list undelelivered orders for current user
-    list_my_undelivered_orders(current_user)
+    list_my_orders(current_user)
     # Have them choose
     index = @orders_view.ask_user_for_index
     # Retrieve all orders for that user
@@ -76,10 +77,5 @@ class OrdersController
     @employees_view.display(employees)
     index = @orders_view.ask_user_for_index
     return employees[index]
-  end
-
-  def list_my_undelivered_orders(user)
-    orders = @order_repo.my_undelivered_orders(user)
-    @orders_view.display(orders)
   end
 end
