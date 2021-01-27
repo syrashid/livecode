@@ -77,5 +77,5 @@ class OrdersController
     @employees_view.display(employees)
     index = @orders_view.ask_user_for_index
     return employees[index]
-  end
+  endl
 end
