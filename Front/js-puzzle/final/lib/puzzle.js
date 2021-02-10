@@ -17,15 +17,25 @@ document.addEventListener('click', () => hint.classList.toggle('active'));
 // Logic for checking empty spots
 // 4. If it has an empty neighbor
 const canMove = (tile) => {
-  console.log(tile);
+  const tileCol = tile.cellIndex;
+  const tileRow = tile.parentElement.rowIndex;
+  const empty = document.querySelector('.empty');
+  const emptyCol = empty.cellIndex;
+  const emptyRow = empty.parentElement.rowIndex;
+
+  return (
+    tileCol === emptyCol && tileRow === emptyRow + 1 ||
+    tileCol === emptyCol && tileRow === emptyRow - 1 ||
+    tileCol === emptyCol + 1 && tileRow === emptyRow ||
+    tileCol === emptyCol - 1 && tileRow === emptyRow
+  )
 }
 
 // Logic for tile swapping
 // 5. Swap the tile and the empty space
 // 6. Check if player wins
 const tileSwap = () => {
-  canMove(event.currentTarget);
-  console.log("I Was clicked");
+  console.log(canMove(event.currentTarget));
 };
 
 // 1. Select all tiles
