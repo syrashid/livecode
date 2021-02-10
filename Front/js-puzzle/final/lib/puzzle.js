@@ -7,5 +7,10 @@
   })
 })();
 
-
 // DO NOT TOUCH CODE ABOVE 👆
+
+// Hint Button
+const hintBtn = document.getElementById('show-hint');
+const hint = document.querySelector('.hint');
+
+document.addEventListener('click', () => hint.classList.toggle('active'));
