@@ -14,6 +14,22 @@ const hint = document.querySelector('.hint');
 
 document.addEventListener('click', () => hint.classList.toggle('active'));
 
+// Logic for swapping contents
+const swapContents = (empty, tile) => {
+  // Swap the text
+  empty.innerText = tile.innerText;
+  tile.innerText = '';
+  // Swap the data attributes
+  empty.setAttribute('data-number', tile.dataset.number);
+  tile.removeAttribute('number');
+  // Swap the images
+  empty.style.backgroundImage = `url(./images/${empty.dataset.number}.jpg)`;
+  tile.style.backgroundImage = '';
+  // Swap the classes
+  empty.classList.remove('empty');
+  tile.classList.add('empty');
+}
+
 // Logic for checking empty spots
 // 4. If it has an empty neighbor
 const canMove = (tile) => {
@@ -31,11 +47,25 @@ const canMove = (tile) => {
   )
 }
 
+// Logic for checking win
+const checkWin = () => {
+  const tiles = Array.from(document.querySelectorAll('td'));
+  const win = tiles.map((tile) => tile.innerText).join() === "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,"
+  if (win) alert("You have Paal'd the game!")
+}
+
 // Logic for tile swapping
 // 5. Swap the tile and the empty space
 // 6. Check if player wins
 const tileSwap = () => {
-  console.log(canMove(event.currentTarget));
+  if (canMove(event.currentTarget)) {
+    // 1. Select empty tile
+    const empty = document.querySelector(".empty");
+    // 2. Replace its content with the `element`'s content
+    swapContents(empty, event.currentTarget);
+    // 3. Check for a win
+    checkWin();
+  }
 };
 
 // 1. Select all tiles

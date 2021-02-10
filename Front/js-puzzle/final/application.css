@@ -21,14 +21,9 @@ td {
   width: 100px;
   height: 100px;
   margin: 1px;
-  background: white;
   background-size: contain;
   font-size: 1.5em;
   cursor: pointer;
-}
-
-.empty {
-  background: black;
 }
 
 button {
