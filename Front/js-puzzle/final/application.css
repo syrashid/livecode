@@ -19,12 +19,10 @@ tr {
 
 td {
   width: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100px;
   margin: 1px;
   background: white;
+  background-size: contain;
   font-size: 1.5em;
   cursor: pointer;
 }
