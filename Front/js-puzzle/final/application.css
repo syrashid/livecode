@@ -23,6 +23,8 @@ td {
   margin: 1px;
   background-size: contain;
   font-size: 1.5em;
+  font-weight: bolder;
+  text-shadow: 1px 1px white;
   cursor: pointer;
 }
 
