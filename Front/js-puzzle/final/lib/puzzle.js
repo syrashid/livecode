@@ -14,7 +14,7 @@ const swapContents = (empty, tile) => {
   tile.innerText = '';
   // Swap the data attributes
   empty.setAttribute('data-number', tile.dataset.number);
-  tile.removeAttribute('number');
+  tile.removeAttribute('data-number');
   // Swap the images
   empty.style.backgroundImage = `url(./images/${mode}/${empty.dataset.number}.jpg)`;
   tile.style.backgroundImage = '';
@@ -73,10 +73,21 @@ hintBtn.addEventListener('click', () => hint.classList.toggle('active'));
 // Initial Game Set up
 // 0. Decorate tiles
 decorate();
+
 // 1. Select all tiles
 const tiles = document.querySelectorAll("td");
 
 // 2. For each tile
 // 3. Listen to the click event
 tiles.forEach((tile) => tile.addEventListener('click', tileSwap))
+
+// EXTRA: Button listeners to swap decoration
+const buttons = document.querySelectorAll('.btn-mode');
+buttons.forEach((btn) => {
+  btn.addEventListener('click', (event) => {
+    console.log(event);
+    mode = event.currentTarget.dataset.mode;
+    decorate();
+  })
+})
 
