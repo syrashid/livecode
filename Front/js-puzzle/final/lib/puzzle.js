@@ -1,18 +1,11 @@
-// Decorate
-(() => {
-  const pieces = document.querySelectorAll('td');
-  pieces.forEach((piece) => {
-    if (piece.dataset.number) piece.style.backgroundImage = `url(./images/sy/${piece.dataset.number}.jpg)`;
-  })
-})();
-
-// DO NOT TOUCH CODE ABOVE 👆
-
-// Hint Button
-const hintBtn = document.getElementById('show-hint');
-const hint = document.querySelector('.hint');
-
-hintBtn.addEventListener('click', () => hint.classList.toggle('active'));
+// Logic for decorating tiles
+const decorate = () => {
+  const tiles = document.querySelectorAll("td");
+  tiles.forEach((tile) => {
+    if (tile.dataset.number)
+      tile.style.backgroundImage = `url(./images/${mode}/${tile.dataset.number}.jpg)`;
+  });
+}
 
 // Logic for swapping contents
 const swapContents = (empty, tile) => {
@@ -23,7 +16,7 @@ const swapContents = (empty, tile) => {
   empty.setAttribute('data-number', tile.dataset.number);
   tile.removeAttribute('number');
   // Swap the images
-  empty.style.backgroundImage = `url(./images/${empty.dataset.number}.jpg)`;
+  empty.style.backgroundImage = `url(./images/${mode}/${empty.dataset.number}.jpg)`;
   tile.style.backgroundImage = '';
   // Swap the classes
   empty.classList.remove('empty');
@@ -51,7 +44,7 @@ const canMove = (tile) => {
 const checkWin = () => {
   const tiles = Array.from(document.querySelectorAll('td'));
   const win = tiles.map((tile) => tile.innerText).join() === "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,"
-  if (win) alert("You have Paal'd the game!")
+  if (win) alert(`You have ${mode}'d the game!`)
 }
 
 // Logic for tile swapping
@@ -68,6 +61,18 @@ const tileSwap = (event) => {
   }
 };
 
+// Starting state
+let mode = 'paal'
+
+// Hint Button
+const hintBtn = document.getElementById('show-hint');
+const hint = document.querySelector('.hint');
+
+hintBtn.addEventListener('click', () => hint.classList.toggle('active'));
+
+// Initial Game Set up
+// 0. Decorate tiles
+decorate();
 // 1. Select all tiles
 const tiles = document.querySelectorAll("td");
 
