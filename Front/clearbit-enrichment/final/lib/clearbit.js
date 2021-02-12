@@ -19,6 +19,17 @@ const callClearbitApi = (email) => {
   })
 }
 
+const callClearbitApiAsync = async (email) => {
+  const response = await fetch(
+    `https://person.clearbit.com/v2/combined/find?email=${email}`,
+    {
+      headers: { Authorization: authorization },
+    }
+  )
+  const data = await response.json();
+  insertMarkup(data.person);
+};
+
 
 // 1. Add listener on the form
 (() => {
@@ -28,7 +39,7 @@ const callClearbitApi = (email) => {
     event.preventDefault();
     // 3. Send an AJAX request to the Clearbit API using the fetch API
     const email = document.querySelector('#clearbitEmail');
-    callClearbitApi(email.value);
+    callClearbitApiAsync(email.value);
   })
 })();
 
