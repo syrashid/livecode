@@ -18,7 +18,7 @@ Important things for Sy to cover, make sure he covers all these
 2) Restful Pattern x
 3) Iterative testing x
 4) HTTP Headers (cookies, authentication, user-agent) x
-5) IIFE x
+5) Async/ Await
 6) Callback function x
 7) Difference between function declaration and expression x
 
