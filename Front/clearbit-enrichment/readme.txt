@@ -1,6 +1,6 @@
-LIVECODE - COPYCAT CHALLENGE
+LIVECODE - CLEARBIT CHALLENGE
 
-Hello class, today our challenge is to use the Enrichment future of Clearbit and it's API featured below: 👇
+Hello class, today our challenge is to use the Enrichment feature of Clearbit and it's API featured below: 👇
 
 Try it Here (Give it a try section): https://clearbit.com/enrichment
 API DOC: https://clearbit.com/docs?shell#enrichment-api
