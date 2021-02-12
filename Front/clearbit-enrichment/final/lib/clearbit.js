@@ -5,6 +5,7 @@ const authorization = "Bearer sk_d3589776fb80b0662ab099fb9af0f99b";
 const insertMarkup = (data) => {
   document.querySelector('#userName').innerText = data.name.fullName;
   document.querySelector('#userEmail').innerText = data.email;
+  document.querySelector("#userBio").innerText = data.bio;
   document.querySelector('#userPhoto').innerHTML = `<img src="${data.avatar}" height="120" width="120">`;
   document.querySelector('#userLocation').innerText = data.location;
 }
